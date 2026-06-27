@@ -9,6 +9,7 @@ html{
 
 body{
     background-color: #a3cef1;
+    overflow: hidden; /* Locks the main viewport */
 }
 
 .title-box{
@@ -20,12 +21,18 @@ body{
     justify-content: center;
 }
 
-.title, .title-logo{
+.title{
     color:#efefd0;
     font-family:'Times New Roman', Times, serif;
-    font-size: clamp(0.2rem, 5vw, 2rem);
+    font-size: clamp(0.1rem, 5vw, 2rem);
     font-weight:bold;
-    padding-top:2vh;
+    margin: 2vh 0vh 2vh 0;
+}
+
+.title-logo{
+    margin: 1.4vh 0vh 2vh 0;
+    max-width: auto;
+    max-height: auto;
 }
 
 
@@ -57,21 +64,72 @@ body{
     font-weight:lighter;
 }
 
+.title-1{
+    font-size: clamp(0.3rem, 5vw, 1.5rem);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2.5vh;
+}
+
+.title-2{
+    font-size: clamp(0.3rem, 5vw, 1.3rem);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.text{
+    font-size: clamp(0.3rem, 5vw, 1.2rem);
+    text-align: justify;
+    margin:2vh 3vw 2vh 3vw;
+}
+
+.text-li{
+    font-size: clamp(0.3rem, 5vw, 1.2rem);
+    margin:2vh 0vw 2vh 0vw;
+    text-align: center;
+}
+
+.text-line{
+    width: 60%; 
+    margin: auto; 
+    margin-top: 5vh;
+    border-bottom: 2px solid #333;
+}
+
+table{
+    margin:auto;
+    border-collapse: collapse;
+}
+th,td{
+    border: 2px solid black; 
+    padding: 0.5vw;
+    background-color: #ced1dc;
+    text-align: center;
+}
+
+
 .info-box{
     width: auto;
     height: 90.5vh;
-}
-
-.info-content{
-    display: flex;
-    flex-direction: column;
-}
-
-.info-text{
-    font-size: clamp(0.1rem, 5vw, 1.2rem);
-    text-align: center;
+    margin: auto;
+    overflow-y: auto;
 }
 
 .body-box a{
     color: rgb(7, 41, 130);
+}
+
+.image-box{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+}
+
+.image-item{
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px 5px #0007;
+    margin: 2vw;
 }

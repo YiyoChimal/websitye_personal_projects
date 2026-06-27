@@ -21,12 +21,18 @@ body{
     justify-content: center;
 }
 
-.title, .title-logo{
+.title{
     color:#efefd0;
     font-family:'Times New Roman', Times, serif;
-    font-size: clamp(0.2rem, 5vw, 2rem);
+    font-size: clamp(0.1rem, 5vw, 2rem);
     font-weight:bold;
-    padding-top:2vh;
+    margin: 2vh 0vh 2vh 0;
+}
+
+.title-logo{
+    margin: 1.4vh 0vh 2vh 0;
+    max-width: auto;
+    max-height: auto;
 }
 
 

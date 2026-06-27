@@ -21,12 +21,18 @@ body{
     justify-content: center;
 }
 
-.title, .title-logo{
+.title{
     color:#efefd0;
     font-family:'Times New Roman', Times, serif;
-    font-size: clamp(0.2rem, 5vw, 2rem);
+    font-size: clamp(0.1rem, 5vw, 2rem);
     font-weight:bold;
-    padding-top:2vh;
+    margin: 2vh 0vh 2vh 0;
+}
+
+.title-logo{
+    margin: 1.4vh 0vh 2vh 0;
+    max-width: auto;
+    max-height: auto;
 }
 
 
@@ -48,6 +54,14 @@ body{
     font-size: clamp(0.2rem, 5vw, 1.2rem);
     text-align: left;
     font-weight:bold;
+}
+
+.menu-first summary{
+    cursor: pointer;
+}
+
+.menu-second{
+    font-weight:lighter;
 }
 
 .title-1{
@@ -83,6 +97,7 @@ body{
     margin-top: 5vh;
     border-bottom: 2px solid #333;
 }
+
 table{
     margin:auto;
     border-collapse: collapse;
@@ -94,13 +109,6 @@ th,td{
     text-align: center;
 }
 
-.menu-first summary{
-    cursor: pointer;
-}
-
-.menu-second{
-    font-weight:lighter;
-}
 
 .info-box{
     width: auto;

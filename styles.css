@@ -14,19 +14,25 @@ body{
 
 .title-box{
     width: 100vw;
-    height: 9.5vh;
+    min-height: 9.5vh;
     background-color:#274c77 ;
     box-shadow: 0px 0px 40px 15px #0007;
     display: flex;
     justify-content: center;
 }
 
-.title, .title-logo{
+.title{
     color:#efefd0;
     font-family:'Times New Roman', Times, serif;
-    font-size: clamp(0.2rem, 5vw, 2rem);
+    font-size: clamp(0.1rem, 5vw, 2rem);
     font-weight:bold;
-    padding-top:2vh;
+    margin: 2vh 0vh 2vh 0;
+}
+
+.title-logo{
+    margin: 1.4vh 0vh 2vh 0;
+    max-width: auto;
+    max-height: auto;
 }
 
 
@@ -61,26 +67,26 @@ body{
 .info-box{
     width: auto;
     height: 90.5vh;
+    margin: auto;
+    overflow-y: auto;
 }
 
-.info-content{
+.image-box{
     display: flex;
-    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
 }
 
-.info-image{
-    margin:auto;
-    padding: 2vw;
-}
-
-.image-yiyi{
+.image-item{
     max-width: 100%;
     height: auto;
     box-shadow: 0px 0px 10px 5px #0007;
+    margin: 2vw;
 }
 
-.info-text{
-    font-size: clamp(0.1rem, 5vw, 1.2rem);
+.text-li{
+    font-size: clamp(0.3rem, 5vw, 1.2rem);
+    margin:2vh 0vw 2vh 0vw;
     text-align: center;
 }
 
