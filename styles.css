@@ -9,6 +9,7 @@ html{
 
 body{
     background-color: #a3cef1;
+    overflow: hidden; /* Locks the main viewport */
 }
 
 .title-box{

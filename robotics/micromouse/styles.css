@@ -9,6 +9,7 @@ html{
 
 body{
     background-color: #a3cef1;
+    overflow: hidden; /* Locks the main viewport */
 }
 
 .title-box{
@@ -60,17 +61,28 @@ body{
 .info-box{
     width: auto;
     height: 90.5vh;
+    margin: auto;
+    overflow-y: auto;
 }
 
 .info-content{
     display: flex;
-    flex-direction: column;
 }
 
-.info-text{
-    font-size: clamp(0.1rem, 5vw, 1.2rem);
+.block-1, .block-2{
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    font-size: clamp(0.1rem, 5vw, 1.2rem);
+    font-weight:bold;
 }
+
+.images{
+    max-width: 100%;
+    height: auto;
+}
+
 
 .body-box a{
     color: rgb(7, 41, 130);

@@ -1,2 +1,0 @@
-This is my personal webstie, where I show all my EE projects that I've done in all my years as an Engineer Student as well as a formal Engineer.
-Here you can find the schematics and links to the repository for each project.
