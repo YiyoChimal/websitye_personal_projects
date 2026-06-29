@@ -14,7 +14,7 @@ body{
 
 .title-box{
     width: 100vw;
-    min-height: 9.5vh;
+    height: 9.5vh;
     background-color:#274c77 ;
     box-shadow: 0px 0px 40px 15px #0007;
     display: flex;
@@ -79,6 +79,14 @@ body{
     margin-bottom: 2vh;
 }
 
+.title-3{
+    font-size: clamp(0.3rem, 5vw, 1.3rem);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
 .text{
     font-size: clamp(0.3rem, 5vw, 1.2rem);
     text-align: justify;
@@ -87,6 +95,11 @@ body{
 
 .text-li{
     font-size: clamp(0.3rem, 5vw, 1.2rem);
+    margin:2vh 3vw 2vh 3vw;
+    text-align: center;
+}
+.text-date{
+    font-size: clamp(0.3rem, 5vw, 1rem);
     margin:2vh 0vw 2vh 0vw;
     text-align: center;
 }
@@ -132,19 +145,4 @@ th,td{
     height: auto;
     box-shadow: 0px 0px 10px 5px #0007;
     margin: 2vw;
-}
-
-/* Container that controls the maximum size and centering */
-.video-container {
-    max-width: 800px;       /* Sets a comfortable desktop viewing width */
-    width: 100%;            /* Allows it to shrink to fit mobile screens */
-    margin: 0 auto;         /* Centers the video player horizontally on your page */
-}
-
-/* Styling the actual video box */
-.video-container iframe {
-    width: 100%;            /* Fills the exact width of the parent container */
-    aspect-ratio: 16 / 9;   /* Maintains standard YouTube widescreen proportions */
-    border-radius: 8px;     /* Optional: Gives the player sleek, rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional: Adds a subtle shadow drop */
 }

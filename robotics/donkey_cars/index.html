@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="../../../marlin_logo_two.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../../marlin_logo_two.png" type="image/png">
     <title>Yair Rodríguez Chimal Personal Proyects</title>
 </head>
 <body>
     <div class="title-box">
-        <img class="title-logo" src="../../../marlin_logo_two.png" alt="logo" title="logo" width="50" height="50">
+        <img class="title-logo" src="../../marlin_logo_two.png" alt="logo" title="logo" width="50" height="50">
         <h1 class="title">Yair Rodríguez Personal Projects Site</h1>
     </div>
 
     <div class="body-box">
         <div class="menu-box">
-            <a href="../../../index.html" title="Back to Main">
+            <a href="../../index.html" title="Back to Main">
                 <p class="menu-first">Main</p>
             </a>
             
@@ -23,16 +23,16 @@
                 <details>
                     <summary>Robotics</summary>
                     <ul class="menu-second">
-                        <a href="../../micromouse/index.html">
+                        <a href="../micromouse/index.html">
                             <li>Micromouse</li>
                         </a>
-                        <a href="../../donkey_cars/index.html">
+                        <a href="../donkey_cars/index.html">
                             <li>Donkye Cars</li>
                         </a>
-                        <a href="../../cnc/index.html">
+                        <a href="../cnc/index.html">
                             <li>3 Axis CNC</li>
                         </a>
-                        <a href="../../robotic_arm/index.html">
+                        <a href="../robotic_arm/index.html">
                             <li>Robotic Arm (3 DOF)</li>
                         </a>
                     </ul>
@@ -69,33 +69,109 @@
                         </a>
                     </ul>
                 </details>
+                
             </div>
         </div>
         
         <div class="info-box">
             <div class="info-content">
-                <p class="title-1">Donkye Cars</p>
+
+                <p class="title-1">Donkey Cars</p>
+                <div class="image-box">
+                    <img class="image-item" src="DonkeyCars/2.png" alt="Micromouse V2" title="Micromouse V2" width="500" height="500" >
+                </div>
+
                 <div class="text-line"></div>
                 <p class="title-2">Objective and Description</p>
                 <p class="text">Develop an autonomous ground vehicle capable of navigating a predefined track using computer vision and control algorithms. The project was conducted over one academic year as part of the Practicum course, an investigation-oriented engineering project focused on applying concepts from computer vision, embedded systems, control engineering, and robotics. </p>
+
+                <div class="text-line"></div>
+                <p class="title-2">Project Summary</p>
+                <p class="text">This project involved the development of an autonomous vehicle based on the NVIDIA JetRacer platform. Initially, the system was intended to operate using a Jetson Nano and its original camera; however, hardware and software limitations prevented reliable operation. After extensive troubleshooting, the platform was redesigned using a Raspberry Pi 4 and a USB webcam while retaining the original vehicle chassis, motors, and steering system. The resulting system successfully implemented lane detection, vehicle guidance, remote monitoring, and trajectory control using computer vision techniques and a PI controller. </p>
+
+                
                 <div class="text-line"></div>
                 <p class="title-2">My Role</p>
-                <p class="text-li">• Electronics hardware designer (search the components, make the electronics schematics and do the PCB).</p></li>
-                <p class="text-li">• Firmware programmer (sensors and actuators integration, algorithm and filters implementation).</p></li>
-                <p class="text-li">• Test and implementation.</p></li>
-                </ul>
+                <p class="text-li">• Computer vision development
+                •Embedded software development
+                • Vehicle control implementation
+                • Hardware integration
+                • System testing and debugging
+                • Research and technical documentation
+                </p>
+    
                 <div class="text-line"></div>
-                <p class="title-2">Thecnical Specifications</p>
+                <p class="title-2">Technologies Used</p>
+                <p class="title-3">Hardware</p>
+                <p class="text-li">• Raspberry Pi 4 • USB Webcam • NVIDIA JetRacer Chassis • DC Motors • Steering Servo • Li-ion Battery Pack</p>
+                <p class="title-3">Software</p>
+                <p class="text-li">• Python • OpenCV • NumPy • Jupyter Notebook • Adafruit Libraries • ServoKit</p>
+
+
+
+                <div class="text-line"></div>
+                <p class="title-2">Technical Description</p>
+                <p class="text">Technical Description
+                The vehicle uses a webcam to capture live video of the driving track. Computer vision algorithms process each frame to identify the yellow lane boundaries that define the track. OpenCV is used to perform image filtering, contour extraction, and centroid calculations. The midpoint between the detected lane boundaries is then used as a steering reference for the vehicle.</p>
                 
+                <div class="text-line"></div>
+                <p class="title-2">Computer Vision Implementation</p>
+
+                <p class="text">The vision system was divided into four primary stages:</p>
+                <p class="text">1. HSV Color Conversion</p>
+                <p class="text">The camera image is converted from BGR to HSV color space to improve color segmentation and reduce sensitivity to lighting variations.</p>
+                <p class="text">2. Color Segmentation</p>
+                <p class="text">A binary mask isolates yellow pixels corresponding to the track boundaries. Adjustable HSV thresholds allow tuning under different lighting conditions.</p>
+                <p class="text">3. Contour Detection</p>
+                <p class="text">The system detects contours in the binary image and filters out noise. Only the two largest contours are selected, representing the left and right lane boundaries.</p>
+                <p class="text">4. Centroid Calculation</p>
+                <p class="text">The centroids of the lane boundaries are calculated and used to determine the vehicle's target position relative to the center of the lane.</p>
+                                
+                <div class="text-line"></div>
+                <p class="title-2">Control System</p>
+                <p class="text">A PI (Proportional-Integral) controller was implemented to regulate steering behavior.
+                The controller continuously calculates the error between the desired lane center and the vehicle's detected position. The proportional term provides immediate corrections while the integral term reduces accumulated error over time, resulting in smoother and more stable steering performance.</p>
 
                 <div class="text-line"></div>
-                <p class="title-2">Design Phase</p>
+                <p class="title-2">Curve Handling Strategy</p>
+                <p class="text">One of the main challenges occurred during turns, where one of the lane boundaries could disappear from the camera's field of view.
+                To solve this problem, the vehicle temporarily switches to a line-following mode. When only one lane boundary is detected, the vehicle follows the remaining visible line until both lane boundaries become visible again. This approach significantly improved stability and smoothness during curved sections of the track.</p>
 
                 <div class="text-line"></div>
-                <p class="title-2">PCB Assembly</p>
+                <p class="title-2">Hardware Adaptation</p>
+                <p class="text">The original Jetson Nano-based architecture presented several issues, including storage limitations, camera recognition failures, and software instability during autonomous training.</p>
+                <p class="text">To overcome these challenges:</p>
+                <p class="text">•	The Jetson Nano was replaced with a Raspberry Pi 4.</p> 
+                <p class="text">•	The original camera was replaced with a USB webcam.</p> 
+                <p class="text">•	Custom 3D-printed mounts were designed and manufactured.</p> 
+                <p class="text">•	A USB-C power solution was integrated to safely power the Raspberry Pi using the vehicle's battery system. </p>
+                <div class="image-box">
+                    <img class="image-item" src="DonkeyCars/1.png" alt="Micromouse V2" title="Micromouse V2" width="500" height="500" >
+                </div>
                 <div class="text-line"></div>
                 <p class="title-2">Result</p>
-
+                <p class="text">• Successfully developed a functional autonomous vehicle platform.</p>
+                <p class="text">• Implemented real-time lane detection using computer vision.</p>
+                <p class="text">• Achieved autonomous track following using a PI controller.</p>
+                <p class="text">• Created a remote monitoring and parameter tuning interface.</p>
+                <p class="text">• Integrated hardware, software, and control engineering concepts into a single system.</p>
+                <p class="text">• Designed and manufactured custom 3D-printed components.</p>
+                <div class="image-box">
+                    <img class="image-item" src="DonkeyCars/7.png" alt="Micromouse V2" title="Micromouse V2" width="500" height="500" >
+                </div>
+                <div class="image-box">
+                    <img class="image-item" src="DonkeyCars/3.png" alt="Micromouse V2" title="Micromouse V2" width="500" height="500" >
+                </div>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dKrF0TgF47Y?si=wIs3rzO1vLFvcVaO&amp;start=1" 
+                    title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="title-3">Project Repository</p>
+                <a href="https://github.com/YiyoChimal/CochesAutonomos__DonkeyCars_UAX" target="blank"><p class="text-li">https://github.com/YiyoChimal/CochesAutonomos__DonkeyCars_UAX</p></a>.
+                
+                <p class="text-date">Year: 2025</p>
             </div>
         </div>
     </div>
