@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    box-sizing: border-box;
+    
 }
 
 html{
@@ -38,19 +38,21 @@ body{
 
 .body-box{
     display: flex;
-    width: 100vw;
 }
 
 .menu-box{
-    width: auto;
+    min-width: 15vw;
     height: auto;
     background-color:#6096ba;
     padding: 1vw;
     box-shadow: 10px 0px 15px #0007;
+    /* Forces long words or URLs to break and wrap to the next line */
+    overflow-wrap: break-word; 
+    word-break: break-word;
 }
 
 .menu-first{
-    margin:0;
+    margin: 0;
     font-size: clamp(0.2rem, 5vw, 1.2rem);
     text-align: left;
     font-weight:bold;
@@ -79,6 +81,13 @@ body{
     margin-bottom: 2vh;
 }
 
+.title-3{
+    font-size: clamp(0.3rem, 5vw, 1.3rem);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
 .text{
     font-size: clamp(0.3rem, 5vw, 1.2rem);
     text-align: justify;
@@ -87,6 +96,12 @@ body{
 
 .text-li{
     font-size: clamp(0.3rem, 5vw, 1.2rem);
+    margin:2vh 3vw 2vh 3vw;
+    text-align: center;
+}
+
+.text-date{
+    font-size: clamp(0.3rem, 5vw, 1rem);
     margin:2vh 0vw 2vh 0vw;
     text-align: center;
 }
@@ -111,11 +126,14 @@ th,td{
 
 
 .info-box{
-    width: auto;
+    /*display: flex;
+    justify-content: center;*/
+    min-width: 85vw;
     height: 90.5vh;
     margin: auto;
     overflow-y: auto;
 }
+
 
 .body-box a{
     color: rgb(7, 41, 130);

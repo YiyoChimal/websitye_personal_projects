@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    box-sizing: border-box;
+    
 }
 
 html{
@@ -38,19 +38,21 @@ body{
 
 .body-box{
     display: flex;
-    width: 100vw;
 }
 
 .menu-box{
-    width: auto;
+    min-width: 15vw;
     height: auto;
     background-color:#6096ba;
     padding: 1vw;
     box-shadow: 10px 0px 15px #0007;
+    /* Forces long words or URLs to break and wrap to the next line */
+    overflow-wrap: break-word; 
+    word-break: break-word;
 }
 
 .menu-first{
-    margin:0;
+    margin: 0;
     font-size: clamp(0.2rem, 5vw, 1.2rem);
     text-align: left;
     font-weight:bold;
@@ -64,11 +66,77 @@ body{
     font-weight:lighter;
 }
 
+.title-1{
+    font-size: clamp(0.3rem, 5vw, 1.5rem);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2.5vh;
+}
+
+.title-2{
+    font-size: clamp(0.3rem, 5vw, 1.3rem);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.title-3{
+    font-size: clamp(0.3rem, 5vw, 1.3rem);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.text{
+    font-size: clamp(0.3rem, 5vw, 1.2rem);
+    text-align: justify;
+    margin:2vh 3vw 2vh 3vw;
+}
+
+.text-li{
+    font-size: clamp(0.3rem, 5vw, 1.2rem);
+    margin:2vh 3vw 2vh 3vw;
+    text-align: center;
+}
+
+.text-date{
+    font-size: clamp(0.3rem, 5vw, 1rem);
+    margin:2vh 0vw 2vh 0vw;
+    text-align: center;
+}
+
+.text-line{
+    width: 60%; 
+    margin: auto; 
+    margin-top: 5vh;
+    border-bottom: 2px solid #333;
+}
+
+table{
+    margin:auto;
+    border-collapse: collapse;
+}
+th,td{
+    border: 2px solid black; 
+    padding: 0.5vw;
+    background-color: #ced1dc;
+    text-align: center;
+}
+
+
 .info-box{
-    width: auto;
+    /*display: flex;
+    justify-content: center;*/
+    min-width: 85vw;
     height: 90.5vh;
     margin: auto;
     overflow-y: auto;
+}
+
+
+.body-box a{
+    color: rgb(7, 41, 130);
 }
 
 .image-box{
@@ -84,12 +152,17 @@ body{
     margin: 2vw;
 }
 
-.text-li{
-    font-size: clamp(0.3rem, 5vw, 1.2rem);
-    margin:2vh 0vw 2vh 0vw;
-    text-align: center;
+/* Container that controls the maximum size and centering */
+.video-container {
+    max-width: 800px;       /* Sets a comfortable desktop viewing width */
+    width: 100%;            /* Allows it to shrink to fit mobile screens */
+    margin: 0 auto;         /* Centers the video player horizontally on your page */
 }
 
-.body-box a{
-    color: rgb(7, 41, 130);
+/* Styling the actual video box */
+.video-container iframe {
+    width: 100%;            /* Fills the exact width of the parent container */
+    aspect-ratio: 16 / 9;   /* Maintains standard YouTube widescreen proportions */
+    border-radius: 8px;     /* Optional: Gives the player sleek, rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional: Adds a subtle shadow drop */
 }
