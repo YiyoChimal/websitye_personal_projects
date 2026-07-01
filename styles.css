@@ -41,14 +41,11 @@ body{
 }
 
 .menu-box{
-    min-width: 15vw;
+    width: auto;
     height: auto;
     background-color:#6096ba;
     padding: 1vw;
     box-shadow: 10px 0px 15px #0007;
-    /* Forces long words or URLs to break and wrap to the next line */
-    overflow-wrap: break-word; 
-    word-break: break-word;
 }
 
 .menu-first{
@@ -128,7 +125,7 @@ th,td{
 .info-box{
     /*display: flex;
     justify-content: center;*/
-    min-width: 85vw;
+    max-width: 85vw;
     height: 90.5vh;
     margin: auto;
     overflow-y: auto;

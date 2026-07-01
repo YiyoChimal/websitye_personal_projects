@@ -65,7 +65,7 @@ body{
 }
 
 .info-box{
-    width: auto;
+    max-width: 85vw;
     height: 90.5vh;
     margin: auto;
     overflow-y: auto;
