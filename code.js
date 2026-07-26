@@ -4,8 +4,6 @@ switch(nameMenu){
     case "option_1":move="../../";break;
     case "option_2": move="../../../";break;
 }
-
-
             document.write(`<div class="menu-box">
             <a href="${move}index.html" title="Back to Main">
                 <p class="menu-first">Main</p>
