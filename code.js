@@ -1,4 +1,5 @@
 function Menu(nameMenu){
+    let move="";
 switch(nameMenu){
     case "main":move="";break;
     case "option_1":move="../../";break;
