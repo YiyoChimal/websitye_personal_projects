@@ -44,7 +44,24 @@ switch(nameMenu){
                 </details>
 
                 <details>
-                    <summary>Others</summary>
+                    <summary>Illumination</summary>
+                    <ul class="menu-second">
+                        <a href="${move}illumination/rgb_led_controller/index.html">
+                            <li>RGB_Led_Controller</li>
+                        </a>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>FPGA</summary>
+                    <ul class="menu-second">
+                
+                    </ul>
+                </details>
+
+
+                <details>
+                    <summary>General EE Projects</summary>
                     <ul class="menu-second">
                         <a href="${move}others/condenser/index.html">
                             <li>Air Humidity Condenser</li>
@@ -58,11 +75,9 @@ switch(nameMenu){
                         <a href="${move}others/conveyor_belt/index.html">
                             <li>Color-Sorting Conveyor belt</li>
                         </a>
-                        <a href="${move}others/rgb_led_controller/index.html">
-                            <li>RGB_Led_Controller</li>
-                        </a>
                     </ul>
                 </details>
+
             </div>
         </div>`);
     }
